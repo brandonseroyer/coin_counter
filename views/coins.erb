@@ -1,0 +1,8 @@
+<h1>Your Coin Combo is:</h1>
+<% @result.each() do |coin| %>
+  <%= coin %>
+<% end %>
+
+<form action='/'>
+<button type="submit" class="btn-danger">Try again!</button>
+</form>
