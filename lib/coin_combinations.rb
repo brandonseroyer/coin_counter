@@ -5,39 +5,39 @@ class Fixnum
     counter = 0
     if remainder > 25
       until remainder < 25
-          puts "quarter"
-          counter = counter.+(1)
-          remainder = remainder.-(25)
+        puts "quarter"
+        remainder = remainder.-(25)
+        finalchange.push("quarter")
       end
+      remainder
     end
-    remainder
-    counter
-  end
-  # finalchange.push(counter)
-  # finalchange.push("quarter")
-  counter = 0
+    counter = 0
     if remainder > 10
-      until counter.== (remainder)
+      until remainder < 10
         puts "dime"
-        counter = counter.+(10)
         remainder = remainder.-(10)
+        finalchange.push("dime")
+      end
+      remainder
     end
+    counter = 0
+    if remainder > 5
+      until remainder < 5
+        puts "nickel"
+        remainder = remainder.-(5)
+        finalchange.push("nickel")
+      end
+      remainder
+    end
+    counter = 0
+    if remainder > 1
+      until remainder < 1
+        puts "penny"
+        remainder = remainder.-(1)
+        finalchange.push("penny")
+      end
+      remainder
+    end
+    finalchange
   end
-  remainder
-  counter
 end
-#
-
-#     if remainder > 5
-#       until counter.== (remainder)
-#       puts "nickel"
-#       counter = counter.+(5)
-#     if remainder > 1
-#       until counter.== (remainder)
-#       puts "penny"
-#       counter = counter.+(1)
-#     end
-#   end
-# end
-#
-#
